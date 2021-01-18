@@ -1,0 +1,13 @@
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\bin\Debug\netcoreapp3.1\Intro.exe
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\bin\Debug\netcoreapp3.1\Intro.deps.json
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\bin\Debug\netcoreapp3.1\Intro.runtimeconfig.json
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\bin\Debug\netcoreapp3.1\Intro.runtimeconfig.dev.json
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\bin\Debug\netcoreapp3.1\Intro.dll
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\bin\Debug\netcoreapp3.1\Intro.pdb
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\obj\Debug\netcoreapp3.1\Intro.csprojAssemblyReference.cache
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\obj\Debug\netcoreapp3.1\Intro.AssemblyInfoInputs.cache
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\obj\Debug\netcoreapp3.1\Intro.AssemblyInfo.cs
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\obj\Debug\netcoreapp3.1\Intro.csproj.CoreCompileInputs.cache
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\obj\Debug\netcoreapp3.1\Intro.dll
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\obj\Debug\netcoreapp3.1\Intro.pdb
+C:\Users\MSI_NB\Documents\Project\Csharp\Intro\obj\Debug\netcoreapp3.1\Intro.genruntimeconfig.cache
