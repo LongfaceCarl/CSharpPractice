@@ -10,53 +10,48 @@ namespace ShoppingCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, how many people do you have?");
-            string responseOne = Console.ReadLine();
+            float total = 0;
+            int peopleCount = askFor("Hello, how many people do you have?");
+            string receipt = "";
+
             Console.WriteLine("Okay, here's our menu:");
-            Console.WriteLine("jingDian: 30 yuan");
-            Console.WriteLine("teDian: 20 yuan");
-            Console.WriteLine("xiaoDian: 10 yuan");
-            Console.WriteLine("siuDian: 5 yuan");
-            Console.WriteLine("Dish: 50 yuan");
-            Console.WriteLine("Rice: 2 yuan");
+            Console.WriteLine("jingDian:        30 yuan");
+            Console.WriteLine("teDian:          20 yuan");
+            Console.WriteLine("xiaoDian:        10 yuan");
+            Console.WriteLine("siuDian:         05 yuan");
+            Console.WriteLine("Dish:            50 yuan");
+            Console.WriteLine("Rice:            02 yuan");
             Console.WriteLine();
-            Console.WriteLine("How many jingDian do you want?");
-            string responseTwo = Console.ReadLine();
-            Console.WriteLine("How many teDian do you want?");
-            string responseThree = Console.ReadLine();
-            Console.WriteLine("How many xiaoDian do you want?");
-            string responseFour = Console.ReadLine();
-            Console.WriteLine("How many siuDian do you want?");
-            string responseFive = Console.ReadLine();
-            Console.WriteLine("How many Dish do you want?");
-            string responseSix = Console.ReadLine();
-            Console.WriteLine("How many Rice do you want?");
-            string responseSeven = Console.ReadLine();
 
-            int twoConvert = Convert.ToInt16(responseTwo);
-            int threeConvert = Convert.ToInt16(responseThree);
-            int fourConvert = Convert.ToInt16(responseFour);
-            int fiveConvert = Convert.ToInt16(responseFive);
-            int sixConvert = Convert.ToInt16(responseSix);
-            int sevenConvert = Convert.ToInt16(responseSeven);
-            int oneConvert = Convert.ToInt16(responseOne);
+            for (int i = 0; i < peopleCount; i++)
+            {
+                Console.WriteLine("\nWhat would you like to order?");
+                Console.WriteLine("What's your name?");
+                string name = Console.ReadLine();
 
-            int jingDianTotal = twoConvert * 30;
-            int teDianTotal = threeConvert * 20;
-            int xiaoDianTotal = fourConvert * 10;
-            int siuDianTotal = fiveConvert * 5;
-            int dishTotal = sixConvert * 50;
-            int riceTotal = sevenConvert * 2;
+                int jingDianTotal = askFor("How many jingDian do you want?") * 30;
+                int teDianTotal = askFor("How many teDian do you want?") * 20;
+                int xiaoDianTotal = askFor("How many xiaoDian do you want?") * 10;
+                int siuDianTotal = askFor("How many siuDian do you want?") * 5;
+                int dishTotal = askFor("How many Dish do you want?") * 50;
+                int riceTotal = askFor("How many Rice do you want?") * 2;
+                float totalPerPerson = jingDianTotal + teDianTotal + xiaoDianTotal + siuDianTotal + dishTotal + riceTotal;
 
-            float total = jingDianTotal + teDianTotal + xiaoDianTotal + siuDianTotal + dishTotal + riceTotal;
-            float average = total / oneConvert;
+                receipt += name + ", your total is: " + totalPerPerson + "\n";
 
-            Console.WriteLine("Your total is " + total);
+                total += totalPerPerson;
+            }
+
+            Console.Write(receipt);
+            Console.WriteLine("The total is " + total);
+            Console.WriteLine("Every customer should pay if AA:" + total / peopleCount);
             Console.ReadLine();
-            Console.WriteLine("Every customer should pay " + average);
-            Console.ReadLine();
+        }
 
-
+        static int askFor(string prompt)
+        {
+            Console.Write(prompt + "> ");
+            return Convert.ToInt16(Console.ReadLine());
         }
     }
 }

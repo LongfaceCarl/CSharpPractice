@@ -1,0 +1,7 @@
+C:\Users\LeoNgan\Desktop\gitC\CSharpPractice\CommandCalculator\CommandCalculator\bin\Debug\CommandCalculator.exe.config
+C:\Users\LeoNgan\Desktop\gitC\CSharpPractice\CommandCalculator\CommandCalculator\bin\Debug\CommandCalculator.exe
+C:\Users\LeoNgan\Desktop\gitC\CSharpPractice\CommandCalculator\CommandCalculator\bin\Debug\CommandCalculator.pdb
+C:\Users\LeoNgan\Desktop\gitC\CSharpPractice\CommandCalculator\CommandCalculator\obj\Debug\CommandCalculator.csprojAssemblyReference.cache
+C:\Users\LeoNgan\Desktop\gitC\CSharpPractice\CommandCalculator\CommandCalculator\obj\Debug\CommandCalculator.csproj.CoreCompileInputs.cache
+C:\Users\LeoNgan\Desktop\gitC\CSharpPractice\CommandCalculator\CommandCalculator\obj\Debug\CommandCalculator.exe
+C:\Users\LeoNgan\Desktop\gitC\CSharpPractice\CommandCalculator\CommandCalculator\obj\Debug\CommandCalculator.pdb
