@@ -10,22 +10,64 @@ namespace CommandCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What would you like to do?");
-            CheckInput();
-
-        }
-
-        static void CheckInput()
-        {
-            string rawData = Console.ReadLine();
-            string[] commands = rawData.Split(' ');
-            if (commands[0] == "add")
+            if(args.Length != 0)
             {
-                int results = Convert.ToInt32(commands[1]) + Convert.ToInt32(commands[2]);
-                Console.WriteLine(commands[1] + " + " + commands[2] + " = " + results);
+                double results = add(args) + multiply(args) + divide(args);
+                Console.WriteLine(results);
+                Console.ReadLine();
+                return;
             }
+            Console.WriteLine("What would you like to do?");
+            string rawData = "";
+            while (rawData != "quit")
+            {
+                rawData = Console.ReadLine();
+                string[] commands = rawData.Split(' ');
 
-            Console.ReadLine();
+                double results = add(commands) + multiply(commands) + divide(commands);
+
+                Console.WriteLine(results);
+                Console.WriteLine("enter 'quit' to quit or else to continue");
+            }
+        }
+        static double add(string[] inputs)
+        {
+            double results = 0;
+            if (inputs[0] == "add")
+            {
+                for (int i = 1; i < inputs.Length; i++)
+                {
+                    results += Convert.ToDouble(inputs[i]);
+                }
+            }
+            return results;
+        }
+        static double multiply(string[] inputs)
+        {
+            double results = 0;
+            if (inputs[0] == "multiply")
+            {
+                results = 1;
+                for (int i = 1; i < inputs.Length; i++)
+                {
+                    results *= Convert.ToDouble(inputs[i]);
+                }
+            }
+            return results;
+        }
+        static double divide(string[] inputs)
+        {
+            double results = 0;
+            if (inputs[0] == "divide")
+            {
+                results = Convert.ToDouble(inputs[1]);
+                results *= results;
+                for (int i = 1; i < inputs.Length; i++)
+                {
+                    results /= Convert.ToDouble(inputs[i]);
+                }
+            }
+            return results;
         }
     }
 }
