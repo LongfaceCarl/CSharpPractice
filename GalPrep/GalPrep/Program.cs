@@ -8,28 +8,21 @@ namespace GalPrep
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            String copy = File.ReadAllText("text.txt");
-            string[] arrayText = copy.Split(new string[] { "\r\n" }, StringSplitOptions.None);
-            int i = 0;
-            String name = "Leo";
-            String sig = "*";
-            while (i < arrayText.Length) {
-                while (arrayText[i] == "")
-                {
-                    i++;
-                }
-                if (arrayText[i].StartsWith(sig + "name"))
-                {
-                    name = arrayText[i].Substring(6);
-                    i++;
-                }
-                Console.Write(name + ": " + arrayText[i]);
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.WriteLine("Booting System");
+
+            //Details has been moved to a different class called FalProcessor
+            GalProcessor galProcessor = new GalProcessor();
+            galProcessor.Initiate();
+
+            //When End Not Reached, repeat forever
+            while (!galProcessor.ReachedEnd()) {
+                Console.Write(galProcessor.CurrentLine());
                 Console.ReadLine();
-                i++;
+                galProcessor.Next();
             }
+            Console.WriteLine("Press Enter once more to exit the system");
             Console.ReadLine();
-            
         }
     }
 }
