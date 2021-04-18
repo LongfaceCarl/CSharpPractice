@@ -7,10 +7,20 @@ That's it.
 
 
 
+/define name Leo
+/define value 10
+/set value 20
+/if name == Leo
+	/skipToAfter 15
+	这人就是个傻逼
+	aaaaaaa
+		aaa
+
+
+
 /setSpeakerName Leo
-/setSpeakerName Muto66
-/skipToAfter 14
-你们天狗和财布真的有一手，skipToAfter跳到第14行了
+/skipToAfter 27
+你们天狗和财布真的有一手，skipToAfter跳到第17行了
 建议加大力度，虽然这段话应该会被跳过就是了
 楼Carl！
 好消息！

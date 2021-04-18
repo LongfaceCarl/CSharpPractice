@@ -14,18 +14,21 @@ namespace GalPrep
 
         //If this line is a command, the command must have these properties
         public string command;
+        public int commandEmbeddedLevel;
         public string[] parameters;
 
         //Initialization of this class
         //Analyze the text and decide if this is a valid command
         public GalLine(string ToSetText)
         {
+            ToSetText = AnalyzeLayer(ToSetText);
             lineText = ToSetText;
             if(ToSetText == "")
             {
                 isCommand = true;
                 return;
             }
+
             for (int i = 0; i < commandIndicator.Length; i++)
             {
                 if (lineText.StartsWith(commandIndicator[i]))
@@ -46,6 +49,19 @@ namespace GalPrep
             command = commandAndProperties[0];
             //set the parameters of this command
             parameters = commandAndProperties.Skip(1).ToArray();
+        }
+
+        private string AnalyzeLayer(string text)
+        {
+            foreach (char c in text)
+            {
+                if (c == '\t')
+                    commandEmbeddedLevel += 1;
+                else
+                    break;
+            }
+            text = text.Remove(0, commandEmbeddedLevel);
+            return text;
         }
     }
 }
