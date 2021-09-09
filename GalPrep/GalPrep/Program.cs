@@ -13,7 +13,7 @@ namespace GalPrep
 
             //Details has been moved to a different class called FalProcessor
             GalProcessor galProcessor = new GalProcessor();
-            galProcessor.Initiate();
+            galProcessor.Initiate("UselessPathForInsideResource");
 
             //When End Not Reached, repeat forever
             while (!galProcessor.ReachedEnd()) {

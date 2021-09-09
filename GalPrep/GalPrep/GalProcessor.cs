@@ -11,8 +11,9 @@ namespace GalPrep
         private int lineNumber = 0;//Records the current line but do not allow direct edit
         private List<GalLine> storyData = new List<GalLine>();//Each Line is processed in to a new type called GalLine
         private List<GalVariable> galVariableList = new List<GalVariable>();//Each Line is processed in to a new type called GalLine
+        CommandProcessor commandProcessor;
 
-        private string speakerName = "";
+        string speakerName = "";
         public int LineNumber//Converting lineNumber
         {
             //This is so the way user think about line number can be easilly
@@ -21,10 +22,12 @@ namespace GalPrep
             get { return lineNumber + 1; }
             set { lineNumber = value - 1; }
         }
-        public void Initiate()
+        public void Initiate(string pathToFile)
         {
+            commandProcessor = new CommandProcessor();
+
             //File reading is handled at GalProperties, just more customized
-            string rawDataFromFile = GalProperties.FileReader("");
+            string rawDataFromFile = GalProperties.FileReader(pathToFile);
             //Conversion to array
             string [] storyDataString = rawDataFromFile.Split(new string[] { "\n" }, StringSplitOptions.None);
             //Turn the array into an GalLine list, where each line was pre-processed on initialization
@@ -64,7 +67,7 @@ namespace GalPrep
                 //When end reached, break
                 if (ReachedEnd())
                 {
-                    break;
+                    return "";
                 }
                 //If there is indeed a next line, read it
                 currentLine = storyData[lineNumber];
@@ -76,7 +79,13 @@ namespace GalPrep
         {
             if (command == "/setSpeakerName")
             {
-                speakerName = parameters[0];
+                //speakerName = parameters[0];
+                string name = "";
+                foreach (string str in parameters)
+                {
+                    name += str + " ";
+                }
+                speakerName = commandProcessor.SetName(name);
             }
             if (command == "/skipToAfter")
             {

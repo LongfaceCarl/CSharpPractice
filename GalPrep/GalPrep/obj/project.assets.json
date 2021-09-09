@@ -688,23 +688,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MSI_NB\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\LeoNgan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MSI_NB\\Documents\\Project\\Csharp\\CSharpPractice\\CSharpPractice-main\\GalPrep\\GalPrep\\GalPrep.csproj",
+      "projectUniqueName": "C:\\Users\\LeoNgan\\Desktop\\GalPrep\\GalPrep\\GalPrep.csproj",
       "projectName": "GalPrep",
-      "projectPath": "C:\\Users\\MSI_NB\\Documents\\Project\\Csharp\\CSharpPractice\\CSharpPractice-main\\GalPrep\\GalPrep\\GalPrep.csproj",
-      "packagesPath": "C:\\Users\\MSI_NB\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MSI_NB\\Documents\\Project\\Csharp\\CSharpPractice\\CSharpPractice-main\\GalPrep\\GalPrep\\obj\\",
+      "projectPath": "C:\\Users\\LeoNgan\\Desktop\\GalPrep\\GalPrep\\GalPrep.csproj",
+      "packagesPath": "C:\\Users\\LeoNgan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LeoNgan\\Desktop\\GalPrep\\GalPrep\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\MSI_NB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LeoNgan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -716,6 +717,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "projectReferences": {}
         }
       },
@@ -727,18 +729,26 @@
     },
     "frameworks": {
       "netcoreapp2.1": {
+        "targetAlias": "netcoreapp2.1",
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
       }
     }
   }
